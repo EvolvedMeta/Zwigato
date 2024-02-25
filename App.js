@@ -1,8 +1,33 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { Header } from "./src/component/Header.js";
+import { Body } from "./src/component/Body.js";
 
-const HeadingComponent = () => { return <h1>Initial Setup</h1> };
+/**
+ * Header
+ *  -Logo
+ *  -Navbar
+ * Body
+ *  - Search
+ *  - Restaurant Container
+ *      - Restaurant Card
+ *          - Image
+ *          - Restaurant Name, Star, Cuisine, Cost , time 
+ *          -
+ * Footer
+ *  - Links
+ *  - Address
+ *  - Contact
+ */
 
+const AppLayout = () => {
+    return (
+        <div class="app">
+            <Header/>
+            <Body/>
+        </div>
+    )
+}
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<HeadingComponent />);
+root.render(<AppLayout />);
 
