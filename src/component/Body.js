@@ -8,6 +8,23 @@ export const Body = () => {
         </div>
         <div className="res-containter">
             <ResCard />
+            <ResCard />
+            <ResCard />
+            <ResCard />
+            <ResCard />
+            <ResCard />
+            <ResCard />
+            <ResCard />
+            <ResCard />
+            <ResCard />
+            <ResCard />
+            <ResCard />
+            <ResCard />
+            <ResCard />
+            <ResCard />
+            <ResCard />
+            <ResCard />
+            <ResCard />
         </div>
     </div>
 )};
