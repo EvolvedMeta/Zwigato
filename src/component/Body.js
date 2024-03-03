@@ -6,16 +6,15 @@ export const Body = () => {
     <div className="body">
       <div className="search-bar">Search</div>
       <div className="res-containter">
-        {menuOptions.map((item) => (
+        {menuOptions.data.cards[0].card.card.gridElements.infoWithStyle.restaurants.map((item) => (
           <ResCard
-            key={item?.data?.id}
-            cloudinaryImageId={item.data?.cloudinaryImageId}
-            name = {item.data.name}
-            totalRatingsString={item?.data?.totalRatingsString}
-            cuisines={item?.data?.cuisines}
-            costForTwo={item?.data?.costForTwo}
-            costForTwoString={item?.data?.costForTwoString}
-            deliveryTime={item?.data?.deliveryTime}
+            key={item?.info?.id}
+            cloudinaryImageId={item.info?.cloudinaryImageId}
+            name = {item?.info?.name}
+            avgRatingString={item?.info?.avgRatingString}
+            cuisines={item?.info?.cuisines}
+            costForTwo={item?.info?.costForTwo}
+            deliveryTime={item?.info?.sla?.deliveryTime}
           />
         ))}
       </div>

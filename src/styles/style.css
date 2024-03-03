@@ -21,9 +21,8 @@
 
 .res-card {
   padding: 5px;
-  background-color: lightgray;
+  background-color: rgb(227, 250, 250);
   width: 250px;
-  height: 450px;
   margin: 15px;
 }
 
@@ -35,7 +34,6 @@
 .res-title {
   text-align: center;
   margin: 5px 0px;
-  height: 30px;
 }
 
 .res-item {
