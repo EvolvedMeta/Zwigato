@@ -1,0 +1,1 @@
+## Special Thanks goes to the Chetannada <#https://github.com/chetannada/Namaste-React#> for doing the through documentation of each video Lecture. These notes are referenced from the notes
