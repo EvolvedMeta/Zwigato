@@ -58,3 +58,17 @@
   flex-direction: row;
   Justify-content: space-evenly;
 }
+
+.search-bar {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.search-bar > button {
+  font-size: 16px;
+  border-radius: 5px;
+  margin-left: 30px;
+  padding: 5px;
+}
+
