@@ -22,7 +22,7 @@ import { Body } from "./component/Body.js";
 
 const AppLayout = () => {
     return (
-        <div class="app">
+        <div className="app">
             <Header/>
             <Body/>
         </div>
