@@ -6,23 +6,29 @@ import { Swiggy_Endpoint } from "../utils/urls.js";
 import { Smimmer } from "./Shimmer.js";
 
 export const Body = () => {
-  const data =
-    menuOptions.data.cards[0].card.card.gridElements.infoWithStyle.restaurants;
-  const [ListOfRestaurants, setListOfRestaurants] = useState(data);
+  // const data =
+  //   menuOptions.data.cards[4].card.card.gridElements.infoWithStyle.restaurants;
+  const [ListOfRestaurants, setListOfRestaurants] = useState([]);
   const [FilteredListOfRestaurants, setFilteredListOfRestaurants] = useState(
     []
   );
   const [searchText, setSearchText] = useState("");
+
   useEffect(() => {
     fetchData();
     ListOfRestaurants.length === 0 ?? setListOfRestaurants([]);
-    setFilteredListOfRestaurants(ListOfRestaurants);
   }, []);
 
   const fetchData = async () => {
     const API_DATA = await fetch(Swiggy_Endpoint);
     const response = await API_DATA.json();
-    console.log(response.data);
+    const data =
+      response?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
+        ?.restaurants;
+
+    setListOfRestaurants(data);
+    ListOfRestaurants.length === 0 ?? setListOfRestaurants([]);
+    setFilteredListOfRestaurants(data);
   };
 
   return (
