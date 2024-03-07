@@ -1,3 +1,8 @@
+*{
+  padding: 0;
+  overflow-x: hidden;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -37,9 +42,10 @@
 
 .res-containter {
   display: flex;
+  width: 100%;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center
 }
 
 .res-card {
