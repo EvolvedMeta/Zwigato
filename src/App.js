@@ -21,23 +21,30 @@ const appRouter = createBrowserRouter([
     {
         path: "/",
         element: <AppLayout />,
-        errorElement: <ErrorPage />
+        children:[
+            {
+                path: "/",
+                element: <Body />,
+                errorElement: <ErrorPage />
+            },
+            {
+                path: "/about",
+                element: <About />,
+                errorElement: <ErrorPage />
+            },
+            {
+                path: "/contact-us",
+                element: <Contact />,
+                errorElement: <ErrorPage />
+            },
+            {
+                path: "/cart",
+                element: <CartItems />,
+                errorElement: <ErrorPage />
+            }
+        ],
+        errorElement: <ErrorPage />,
     },
-    {
-        path: "/about",
-        element: <About />,
-        errorElement: <ErrorPage />
-    },
-    {
-        path: "/contact-us",
-        element: <Contact />,
-        errorElement: <ErrorPage />
-    },
-    {
-        path: "/cart",
-        element: <CartItems />,
-        errorElement: <ErrorPage />
-    }
 ]);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<RouterProvider router={appRouter} />);
