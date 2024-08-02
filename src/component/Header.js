@@ -8,14 +8,14 @@ export const Header = () => {
   return (
     <div className="header">
       <div className="logo">
-        <img className="logoItems" src={LogoLink} />
+        <Link to="/"><img className="logoItems" src={LogoLink} /></Link>
       </div>
       <div className="nav-items">
         <ul>
-          <Link to="/"><li>Home</li></Link>
-          <Link to="/about"><li>About Us</li></Link>
-          <Link to="/contact-us"><li>Contact Us</li></Link>
-          <Link to="/cart"><li>Cart Items</li></Link>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/about">About Us</Link></li>
+          <li><Link to="/contact-us">Contact Us</Link></li>
+          <li><Link to="/cart">Cart Items</Link></li>
           <button
           className="btn btn-primary"
           onClick={() => {
